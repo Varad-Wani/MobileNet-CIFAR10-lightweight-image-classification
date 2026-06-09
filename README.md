@@ -216,16 +216,17 @@ For evaluation, the team looked at accuracy, precision, recall, F1 (all macro-av
 
 ## Configuration Summary
 
-| Dimension             | MobileNetV1 + CE | MobileNetV1 + Custom Loss | MobileNetV2 + CE | MobileNetV2 + Custom Loss |
-| **Loss Function**     | Cross-Entropy    | Edge-Aware Margin (λ=0.1) | Cross-Entropy | Edge-Aware Margin (λ=0.1) |
-| **Training Strategy** | Single-phase     | Single-phase | Two-phase | Two-phase |
-| **Total Epochs**      | 10               | 10 | 5 + 10 | 5 + 10 |
-| **Learning Rate**     | 1e-5 | 1e-5 | 1e-3 → 1e-5 | 1e-3 → 1e-5 |
-| **Batch Size**        | 128 | 128 | 128 | 128 |
-| **Input Resolution**  | 96 × 96 | 96 × 96 | 96 × 96 | 96 × 96 |
-| **Pretrained Weights**| ImageNet | ImageNet | ImageNet | ImageNet |
-| **Total Parameters**  | 3,239,114 | 3,239,114 | 2,270,794 | 2,270,794 |
-| **Architecture**      | Depthwise separable convs | Depthwise separable convs | Inverted residuals + linear bottlenecks | Inverted residuals + linear bottlenecks |
+| Dimension | MobileNetV1 + CE | MobileNetV1 + Custom Loss | MobileNetV2 + CE | MobileNetV2 + Custom Loss |
+|---|---|---|---|---|
+| **Loss Function** | Cross-Entropy | Edge-Aware Margin (λ=0.1) | Cross-Entropy | Edge-Aware Margin (λ=0.1) |
+| **Training Strategy** | Single-phase | Single-phase | Two-phase | Two-phase |
+| **Total Epochs** | 10 | 10 | 5 + 10 | 5 + 10 |
+| **Learning Rate** | 1e-5 | 1e-5 | 1e-3 → 1e-5 | 1e-3 → 1e-5 |
+| **Batch Size** | 128 | 128 | 128 | 128 |
+| **Input Resolution** | 96 × 96 | 96 × 96 | 96 × 96 | 96 × 96 |
+| **Pretrained Weights** | ImageNet | ImageNet | ImageNet | ImageNet |
+| **Total Parameters** | 3,239,114 | 3,239,114 | 2,270,794 | 2,270,794 |
+| **Architecture** | Depthwise separable convs | Depthwise separable convs | Inverted residuals + linear bottlenecks | Inverted residuals + linear bottlenecks |
 | **Confidence Optimization** | No | Yes (maximises p1−p2) | No | Yes (maximises p1−p2) |
 
 
