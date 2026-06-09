@@ -1,6 +1,11 @@
 # MobileNet-CIFAR10-lightweight-image-classification
 Comparative study of MobileNetV1 and MobileNetV2 on the CIFAR-10 dataset using transfer learning, fine-tuning, and a custom margin Loss for efficient edge-device image classification.
 
+## Team
+1) Varad Kishor Wani - CS25B1044
+2) Hrishikesh Manojkumar Dhanlobhe - CS25B1014
+3) Anuj Yogesh Chavan - AD25B1005
+4) 
 ## Project Overview
 
 This project builds an image classification system using MobileNet (V1 and V2) architectures on the CIFAR-10 dataset. The goal is to correctly identify objects across 10 categories using transfer learning on pretrained ImageNet weights, followed by fine-tuning for improved accuracy. Along the way, we explored a custom loss function, two-phase training, and a comparative study between MobileNetV1 and MobileNetV2 under both standard and custom loss settings, this was done to check which of the combination stands out and make it more accurate and efficient for edge devices. 
@@ -84,7 +89,7 @@ class CustomLoss(tf.keras.losses.Loss):
 
 ---
 
-## Varad Kishor Wani — MobileNetV2 Implementation (with and without Custom Loss)
+## Varad Kishor Wani — MobileNetV2 Implementation 
 
 This member implemented the **full MobileNetV2 pipeline end-to-end**, covering both experimental configurations: **MobileNetV2 with standard Categorical Cross-Entropy** and **MobileNetV2 with the Margin Loss**. The work included data preprocessing, building the MobileNetV2 transfer-learning model, running the two-phase training strategy, fine-tuning the backbone, and evaluating both variants on the CIFAR-10 test set.
 
@@ -125,7 +130,7 @@ The exact same pipeline was run twice — once compiled with `categorical_crosse
 
 ---
 
-## Hrishikesh ManojKumar Dhanlobhe — MobileNetV1 Implementation (with and without Custom Loss)
+## Hrishikesh ManojKumar Dhanlobhe — MobileNetV1 Implementation
 
 This member implemented the **full MobileNetV1 pipeline end-to-end** for both experimental configurations: **MobileNetV1 with standard Categorical Cross-Entropy** and **MobileNetV1 with the Edge-Aware Margin Loss**. The work covered building the V1 transfer-learning model, running the single-phase fine-tuning strategy, and evaluating both variants on the CIFAR-10 test set. Comparative-study figures, confusion matrices, and per-class reports for V1 were also produced here.
 
